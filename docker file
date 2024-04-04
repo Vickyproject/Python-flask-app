@@ -4,6 +4,12 @@ FROM python:3.8
 # Set the working directory inside the container
 WORKDIR /app
 
+# Declare build arguments
+ARG DOCKERHUB_USER
+ARG DOCKER_PASSWORD
+ARG DOCKER_REGISTRY_URL
+ARG IMAGE_NAME
+
 # Copy the requirements file
 COPY requirements.txt .
 
